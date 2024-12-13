@@ -1,0 +1,6 @@
+{
+  "cSpell.language": "en,es",
+  "cSpell.words": ["commitlint", "firestore", "hygen", "predeploy"],
+  "editor.minimap.autohide": true,
+  "git.untrackedChanges": "separate"
+}
