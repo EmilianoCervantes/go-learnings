@@ -6,7 +6,7 @@ import (
 
 	// Importing from another package
 	// aliasName "packagePath"
-	vehicles "packageExample/packageExample"
+	vehicles "packageExample/some_package"
 	"reflect"
 )
 

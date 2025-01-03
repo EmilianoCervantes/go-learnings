@@ -27,7 +27,8 @@ func numbers() {
 func main() {
 	numbers()
 	fmt.Println("Strings:", reflect.TypeOf(""))    // string
-	fmt.Printf("Strings: %T\n", "")                // string
+	fmt.Println("Strings:", reflect.TypeOf(""))    // string
+	fmt.Printf("Ints: %T\n", 2)                    // int
 	fmt.Println("Booleans:", reflect.TypeOf(true)) // bool
 
 	fmt.Println()
