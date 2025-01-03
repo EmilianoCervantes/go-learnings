@@ -84,6 +84,7 @@ func slicesInGo() {
 	// ... -> unpacks the slice
 	// Similar to JavaScript's spread operator
 	// JavaScript: [...slice, ...newSlice] and in Go: append(slice, newSlice...)
+	// Note: unexpected behavior with appending 2 arrays: https://freshman.tech/snippets/go/concatenate-slices/
 	slice = append(slice, newSlice...)
 }
 
@@ -193,8 +194,12 @@ func mapsInGo() {
 		return
 	}
 
+	//
+	// map[<keyType>]<valueType>{}
+	//
 	fmt.Println("Using map[<keyType>]<valueType>{<key>: <value>, <key>: <value>}")
-	myMap := map[string]int{"one": 1, "two": 2, "three": 3}
+	// myMap := map[string]int{"one": 1, "two": 2, "three": 3}
+	myMap := map[string]int{}
 	fmt.Println("My first map:", myMap, "with length:", len(myMap))
 
 	// Adding a new key-value pair
@@ -206,9 +211,12 @@ func mapsInGo() {
 	fmt.Println("My map after deleting a key-value pair:", myMap)
 	fmt.Println()
 
+	//
+	// WITH MAKE
+	//
 	fmt.Println("Using make(map[<keyType>]<valueType>)")
 	agesMap := make(map[string]int)
-	fmt.Println("Another map with make:", agesMap, "with length:", len(agesMap))
+	fmt.Println("Another map BUT with make:", agesMap, "with length:", len(agesMap))
 
 	agesMap["Alice"] = 25
 	agesMap["Bob"] = 30
